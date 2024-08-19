@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/bg.png);
+}
+
+.design {
+  display: flex;
+  flex-wrap: wrap; /* 한 줄이 가득 차면 다음 줄로 이동 */
+  justify-content: space-between; /* 이미지들 사이에 균일한 간격 */
+  max-width: 1840px; /* 전체 너비 제한 */
+  margin: 20px auto; /* 가운데 정렬 */
+  gap: 10px; /* 이미지 간 간격 */
+  margin-top: 100px;
+}
+
+.img-container {
+  position: relative;
+  width: 32%; /* 한 줄에 3개씩 배치하기 위해 32%로 설정 */
+  overflow: hidden;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.img-container:hover img {
+  filter: brightness(0.3); /* 이미지가 검은색 오버레이 효과 */
+}
+
+.hover-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  color: rgba(223, 190, 106, 0.7);
+  border-radius: 10px;
+  padding: 20px 40px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(
+    270deg,
+    rgba(223, 190, 106, 0.8),
+    rgba(255, 189, 76, 0.8),
+    rgba(34, 34, 34, 0),
+    rgba(34, 34, 34, 0)
+  );
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.625rem;
+  border: none;
+  border: 1px solid rgba(223, 190, 106, 0.3);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.img-container:hover .hover-btn {
+  opacity: 1; /* 버튼이 나타나게 설정 */
+}
+
+.hover-btn:hover {
+  color: #fff;
+  border: 1px solid rgba(223, 190, 106, 0);
+  color: white;
+  background-position: 99% 50%;
+}
+
+.webdesign {
+  margin-top: 300px;
+  margin-bottom: 100px;
+}

@@ -1,0 +1,101 @@
+.imgslide {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  flex-direction: column;
+}
+#imgslide {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+.slider {
+  width: 100vw;
+  max-width: 1840px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Add spacing between images */
+  animation: slide-left 30s linear infinite;
+}
+
+.slides img {
+  height: 250px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: cover; /* Maintain the aspect ratio of the images */
+}
+
+.slides-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Add spacing between images */
+  animation: slide-right 30s linear infinite;
+  margin-top: 50px;
+}
+
+.slides-2 img {
+  height: 250px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: cover; /* Maintain the aspect ratio of the images */
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 프로젝트 버튼 스타일 설정 */
+.projectbutton {
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center;
+  margin-top: 50px; /* 슬라이더와 버튼 사이의 간격 */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projectbutton .button-image {
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.projectbutton a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("/images/project-button.png") no-repeat center;
+}
+
+.projectbutton a:hover {
+  background: url("/images/project-button2.png") no-repeat center;
+}

@@ -1,0 +1,257 @@
+/* 모달 배경 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed; /* 화면에 고정 */
+  z-index: 9999999; /* 다른 요소 위에 표시 */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; /* 내용이 넘칠 경우 스크롤 */
+  background-color: rgba(0, 0, 0, 0.9); /* 반투명 배경색 */
+  /* margin-top: 50px; */
+}
+
+/* 모달 내용 */
+.modal-content {
+  background-color: #252525;
+  margin: 5% auto; /* 화면 중앙에 위치 */
+  padding: 20px;
+  border-radius: 8px; /* 둥근 모서리 */
+  width: 80%;
+  height: 100%;
+  max-width: 1400px; /* 최대 너비 */
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+/* 이미지 컨테이너 */
+.modal-image-container {
+  max-height: 80vh; /* 화면 높이의 70%로 제한 */
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  overflow-x: hidden; /* 가로 스크롤 숨김 */
+  margin-top: 15px;
+}
+
+/* 이미지 컨테이너의 스크롤바 스타일 (선택 사항) */
+.modal-image-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-image-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modal-image-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* 이미지 스타일 */
+.modal-image {
+  display: block;
+  width: 100%; /* 모달 내용의 너비에 맞게 조정 */
+  height: auto; /* 이미지 비율 유지 */
+  margin-bottom: 15px; /* 이미지 간격 */
+}
+
+/* 닫기 버튼 */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-text {
+  display: flex;
+  font-size: 18px;
+}
+
+.modal-text2 {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 40px;
+
+  margin-top: 10px;
+}
+
+.modal-text h3,
+.modal-text2 h3 {
+  font-weight: bold;
+}
+
+.modal-text span,
+.modal-text2 span {
+  margin-left: 5px;
+}
+
+/* LINK */
+.modal-text .link-box {
+  width: 150px;
+  color: #fff;
+  background-color: #293077;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-text a {
+  color: #fff;
+}
+
+.link-box:hover {
+  border: solid 1px #eacb49;
+  background-color: #29307748;
+}
+.link-box a:hover {
+  color: #eacb49;
+}
+
+.madal1-image-box {
+  margin-top: 50px;
+}
+
+.modal-image {
+  /* margin-bottom: 50px; */
+  margin: 0;
+}
+.modal1-image {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.modal2-image2 {
+  margin-bottom: 50px;
+}
+
+.madal2-image-box {
+  margin-top: 50px;
+}
+
+.modal4-image {
+  margin-bottom: 50px;
+}
+.modal4-image2 {
+  width: 800px;
+  margin-bottom: 50px;
+}
+.modal4-image-mobile {
+  position: relative;
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal4-image-box2 {
+  margin-top: 50px;
+}
+.modal4-image-box {
+  margin-top: 50px;
+}
+
+.modal4-image-box2 {
+  margin-top: 50px;
+}
+.modal9-image-box {
+  width: 980px;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal9-image-2 {
+  width: 100%;
+}
+
+.modal-image-container p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.modal11-image-box {
+  width: 980px;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal11-image-3 {
+  margin-top: 50px;
+}
+
+.modal12-image-2 {
+  width: 790px;
+}
+
+.modal12-image-box {
+  width: 980px;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.madal12-img-box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.modal14-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.modal14-image-2 {
+  width: 790px;
+}
+
+.modal14-image-3 {
+  width: 300px;
+}

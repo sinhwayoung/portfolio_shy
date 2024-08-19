@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Follow Cursor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden; /* 스크롤바 숨기기 */
+      }
+
+      .mouse-pointer {
+        position: fixed; /* 화면에 고정 */
+        border: 2px solid #fff; /* 원의 테두리 색상 */
+        border-radius: 50%; /* 원형으로 만들기 */
+        width: 20px; /* 원의 너비 */
+        height: 20px; /* 원의 높이 */
+        pointer-events: none; /* 원이 클릭되지 않도록 */
+        background-color: #fff; /* 원의 배경 색상 */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* 원의 중심이 마우스 커서와 일치하도록 조정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mouse-pointer"></div>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("mousemove", function (event) {
+        const mousePointer = document.querySelector(".mouse-pointer");
+
+        if (mousePointer) {
+          // 마우스의 X, Y 좌표를 가져오기
+          const x = event.clientX;
+          const y = event.clientY;
+
+          // 원의 위치를 마우스 좌표에 맞게 설정
+          mousePointer.style.left = `${x}px`;
+          mousePointer.style.top = `${y}px`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한루프 이미지 슬라이드</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #333;
+      }
+
+      .slider-container {
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .slider {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .slider img {
+        width: 200px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .slider.slider1 {
+        animation: slide-left 10s linear infinite;
+      }
+
+      .slider.slider2 {
+        animation: slide-right 10s linear infinite;
+      }
+
+      @keyframes slide-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes slide-right {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .slider .slide {
+        display: flex;
+        min-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider slider1">
+        <div class="slide">
+          <img src="https://via.placeholder.com/200x100" alt="Image 1" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 2" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 3" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 4" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/200x100" alt="Image 1" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 2" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 3" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 4" />
+        </div>
+      </div>
+      <div class="slider slider2">
+        <div class="slide">
+          <img src="https://via.placeholder.com/200x100" alt="Image 5" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 6" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 7" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 8" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/200x100" alt="Image 5" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 6" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 7" />
+          <img src="https://via.placeholder.com/200x100" alt="Image 8" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

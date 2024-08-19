@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Image Slider</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .slider {
+        width: 80%;
+        max-width: 800px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .slides {
+        display: flex;
+        width: calc(
+          200%
+        ); /* Twice the width of the original images to accommodate the duplication */
+        animation: slide 20s linear infinite; /* Adjust the duration for the sliding speed */
+      }
+
+      .slides img {
+        width: 20%; /* 5 images fit in the container width */
+        flex-shrink: 0;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%); /* Move by half of the slides' width */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <!-- Add your images here -->
+        <img src="image1.jpg" alt="Image 1" />
+        <img src="image2.jpg" alt="Image 2" />
+        <img src="image3.jpg" alt="Image 3" />
+        <img src="image4.jpg" alt="Image 4" />
+        <img src="image5.jpg" alt="Image 5" />
+        <!-- Duplicate images for infinite loop -->
+        <img src="image1.jpg" alt="Image 1" />
+        <img src="image2.jpg" alt="Image 2" />
+        <img src="image3.jpg" alt="Image 3" />
+        <img src="image4.jpg" alt="Image 4" />
+        <img src="image5.jpg" alt="Image 5" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script></script>
+  </body>
+</html>
