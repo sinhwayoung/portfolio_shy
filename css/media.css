@@ -1,0 +1,498 @@
+/* 반응형 웹을 위한 미디어 쿼리 예시 */
+
+/* 화면 너비가 768px 이하일 때 (태블릿 및 모바일) */
+@media (max-width: 768px) {
+  .header-box {
+    flex-direction: column;
+    border: none;
+    background-color: #f8f8f8;
+    margin-top: 50px;
+  }
+
+  .gnb li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gnb li a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .home h3 {
+    font-size: 24px;
+  }
+
+  .mouse {
+    margin-bottom: 50px;
+  }
+}
+
+/* 화면 너비가 480px 이하일 때 (모바일) */
+@media (max-width: 480px) {
+  .gnb li a {
+    font-size: 14px;
+  }
+
+  .home h3 {
+    font-size: 18px;
+  }
+
+  .header {
+    height: 45px;
+  }
+
+  .header-box {
+    border-radius: 0;
+  }
+}
+@media (max-width: 768px) {
+  .gnb {
+    display: none; /* 작은 화면에서는 메뉴 숨기기 */
+  }
+
+  .menu-icon {
+    display: block; /* 햄버거 아이콘 표시 */
+  }
+}
+
+/* 햄버거 메뉴 스타일 */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* 햄버거 아이콘 클릭 시 메뉴 표시 */
+.menu-icon.active + .gnb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .resize {
+    display: block;
+  }
+}
+@media (max-height: 600px) {
+  .resize {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .slide {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .slide {
+    width: 80vw;
+    padding-right: 10vw;
+  }
+  .slide__title {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide__title {
+    font-size: 5vw;
+  }
+  .menu-btn__circles {
+    height: 0.6vw;
+    width: 0.6vw;
+  }
+}
+@media (max-width: 800px) {
+  .logo--top {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal-image-container {
+    max-height: 90vh; /* 모바일에서 높이를 더 줄일 수 있습니다 */
+  }
+
+  .modal-text {
+    font-size: 16px;
+  }
+
+  .modal-text2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .modal-text,
+  .modal-text2 {
+    font-size: 14px;
+  }
+}
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1200px) {
+  .img-container {
+    width: 48%; /* 화면이 작아지면 2개씩 배치 */
+  }
+}
+
+@media (max-width: 800px) {
+  .img-container {
+    width: 100%; /* 모바일에서는 1개씩 배치 */
+  }
+}
+
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 1.5rem; /* 폰트 사이즈 줄이기 */
+  }
+
+  .home img {
+    display: flex;
+    justify-content: center;
+    max-width: 90%; /* 이미지 너비 조정 */
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.2rem; /* 더 작은 폰트 사이즈 */
+  }
+
+  .home img {
+    display: flex;
+    justify-content: center;
+    max-width: 80%; /* 이미지 너비 조정 */
+  }
+
+  .mouse {
+    display: none; /* 작은 화면에서는 마우스 숨기기 */
+  }
+}
+
+/* 화면 너비가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .home h3 {
+    font-size: 32px;
+    margin-top: 50px;
+  }
+
+  .home .jello-horizontal {
+    width: 200px; /* jello-horizontal 요소 크기 조정 */
+    height: 54px;
+    margin-top: 30px;
+  }
+
+  .roll-in-left {
+    width: 100px; /* roll-in-left 요소 크기 조정 */
+    bottom: 0;
+    margin-bottom: 100px;
+  }
+
+  .home img {
+    width: 80%; /* 모바일 화면에서 이미지 크기 조정 */
+    max-width: none; /* 최대 너비 제거 */
+    margin: 0 auto; /* 가운데 정렬 */
+  }
+}
+
+@media (max-width: 480px) {
+  .roll-in-left img {
+    width: 80px; /* 더 작은 화면에서 크기 조정 */
+    margin-bottom: 80px;
+  }
+}
+/* 화면 너비가 480px 이하일 때 */
+@media (max-width: 480px) {
+  .home h3 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .home .jello-horizontal {
+    width: 150px; /* jello-horizontal 요소 크기 조정 */
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .roll-in-left {
+    width: 80px; /* roll-in-left 요소 크기 조정 */
+    bottom: 0;
+    margin-bottom: 80px;
+  }
+
+  .home img {
+    width: 100%; /* 이미지 너비를 화면에 맞게 조정 */
+    margin: 0 auto; /* 가운데 정렬 */
+  }
+}
+/* 모바일 화면 및 작은 화면에서의 스타일 조정 */
+@media (max-width: 1200px) {
+  #design {
+    height: auto; /* 높이 자동 조정 */
+    margin: 0 auto; /* 여백 조정 */
+    gap: 15px; /* 이미지 간 간격 조정 */
+  }
+  #webdesign .modal9-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal14-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-2 {
+    width: 70%;
+  }
+  #webdesign .modal14-image-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+  #webdesign .modal14-image-3 {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #design {
+    height: auto; /* 높이 자동 조정 */
+    margin: 0 auto; /* 여백 조정 */
+    gap: 15px; /* 이미지 간 간격 조정 */
+  }
+  #webdesign .modal9-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal11-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal14-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-2 {
+    width: 70%;
+  }
+  #webdesign .modal14-image-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  #design {
+    height: auto; /* 높이 자동 조정 */
+    margin: 0 auto; /* 여백 조정 */
+    gap: 10px; /* 이미지 간 간격 조정 */
+  }
+  #webdesign .modal9-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal11-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal14-image-box {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  #webdesign .modal12-image-2 {
+    width: 70%;
+  }
+  #webdesign .modal14-image-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+}
+
+/* 모바일 및 아이폰 화면에 대한 스타일 조정 */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 10px; /* 여백 줄이기 */
+  }
+
+  .contact-inner {
+    width: 100%; /* 너비를 100%로 조정 */
+    height: auto; /* 높이를 자동으로 조정 */
+    background: rgba(255, 255, 255, 0.2) url(/images/bg.png);
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    padding: 20px; /* 여백 추가 */
+    box-sizing: border-box; /* 패딩을 포함하여 전체 크기 조정 */
+  }
+
+  .contact h1 {
+    font-size: 30px; /* 폰트 크기 줄이기 */
+    margin-bottom: 30px; /* 여백 줄이기 */
+  }
+
+  .contact ul li {
+    font-size: 15px; /* 이메일과 전화번호 폰트 크기 줄이기 */
+  }
+
+  .contact ul li {
+    display: block; /* 목록을 블록으로 표시하여 세로로 정렬 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+    margin-bottom: 10px; /* 아래쪽 여백 추가 */
+  }
+
+  .contact ul li a {
+    font-size: 15px; /* 링크 폰트 크기 줄이기 */
+  }
+
+  /* 이미지 숨기기 */
+  .profile-1 img,
+  .profile img {
+    display: none; /* 이미지 숨기기 */
+  }
+
+  .copylight {
+    margin-top: 20px; /* 여백 줄이기 */
+    font-size: 12px; /* 폰트 크기 줄이기 */
+  }
+}
+
+/* 더 작은 화면에서의 스타일 조정 */
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 20px; /* 폰트 크기 줄이기 */
+    margin-bottom: 20px; /* 여백 줄이기 */
+  }
+
+  .contact ul {
+    font-size: 12px; /* 이메일과 전화번호 폰트 크기 줄이기 */
+  }
+
+  .contact ul li a {
+    font-size: 12px; /* 링크 폰트 크기 줄이기 */
+  }
+
+  .profile-1 img,
+  .profile img {
+    display: none; /* 이미지 숨기기 */
+  }
+
+  .copylight {
+    margin-top: 10px; /* 여백 줄이기 */
+    font-size: 10px; /* 폰트 크기 줄이기 */
+  }
+}
+
+/* 모바일 및 작은 화면에서의 스타일 조정 */
+@media (max-width: 768px) {
+  #about .tracking-in-contract {
+    font-size: 20px; /* 폰트 크기 줄이기 */
+    line-height: 2; /* 줄 간격 조정 */
+    max-width: 90%; /* 텍스트의 최대 너비 제한 */
+    margin: 0 auto;
+  }
+
+  #about .scale-up-center {
+    width: 80%; /* 이미지 크기 조정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding-top: 50px;
+  }
+  #about .about-h3 {
+    font-size: 20px;
+  }
+  #about #h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #about .about-span {
+    font-size: 20px;
+    line-height: 1.3; /* 줄 간격 더 줄이기 */
+  }
+  #about .scale-up-center img {
+    width: 100%;
+  }
+  #about .about-p {
+    font-size: 10px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  #about-2 .about-span {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  #about .tracking-in-contract {
+    font-size: 13px; /* 폰트 크기 더 줄이기 */
+    line-height: 2; /* 줄 간격 더 줄이기 */
+    max-width: 100%; /* 텍스트의 최대 너비 조정 */
+    padding: 0 20px; /* 좌우 여백 더 추가 */
+  }
+
+  #about .scale-up-center {
+    width: 85%; /* 이미지 크기 조정 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+  #about .scale-up-center img {
+    width: 100%;
+  }
+  #about-2 .rotating-container {
+    width: 50%;
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+  #about-2 .rotating-container img {
+    width: 30%;
+  }
+  #about-2 .about-span {
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  #about-2 .about-h3 {
+    font-size: 15px;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+  #about-2 .tracking-out-expand {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}

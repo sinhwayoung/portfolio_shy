@@ -690,6 +690,14 @@ img {
     transform: scale(1);
   }
 }
+#about-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(/images/bg.png);
+}
 
 .rotating-container {
   display: flex;
@@ -713,23 +721,19 @@ img {
   }
 }
 
-#about-2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-#about .about-span {
+#about-2 .about-span {
   font-size: 30px;
   margin-top: 40px;
   font-weight: 100;
   color: #5a5a5a;
   letter-spacing: 0;
   font-family: "Dokdo", system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#about .about-h3 {
+#about-2 .about-h3 {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -738,7 +742,7 @@ img {
   letter-spacing: -2px;
 }
 
-#about .about-p {
+#about-2 .about-p {
   display: flex;
   justify-content: center;
   margin-top: 255px;

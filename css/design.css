@@ -4,7 +4,7 @@ body {
   background-image: url(/images/bg.png);
 }
 
-.design {
+#design {
   display: flex;
   flex-wrap: wrap; /* 한 줄이 가득 차면 다음 줄로 이동 */
   justify-content: space-between; /* 이미지들 사이에 균일한 간격 */
@@ -12,6 +12,7 @@ body {
   margin: 20px auto; /* 가운데 정렬 */
   gap: 10px; /* 이미지 간 간격 */
   margin-top: 100px;
+  height: 200vh;
 }
 
 .img-container {
@@ -75,7 +76,22 @@ body {
   background-position: 99% 50%;
 }
 
-.webdesign {
+#webdesign {
+  display: flex;
+  flex-wrap: wrap; /* 한 줄이 가득 차면 다음 줄로 이동 */
+  justify-content: space-between; /* 이미지들 사이에 균일한 간격 */
+  max-width: 1840px; /* 전체 너비 제한 */
+  margin: 20px auto; /* 가운데 정렬 */
+  gap: 10px; /* 이미지 간 간격 */
   margin-top: 300px;
   margin-bottom: 100px;
+}
+.design {
+  display: flex;
+  flex-wrap: wrap; /* 한 줄이 가득 차면 다음 줄로 이동 */
+  justify-content: space-between; /* 이미지들 사이에 균일한 간격 */
+  max-width: 1840px; /* 전체 너비 제한 */
+  margin: 20px auto; /* 가운데 정렬 */
+  gap: 10px; /* 이미지 간 간격 */
+  margin-top: 100px;
 }
