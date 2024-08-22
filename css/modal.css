@@ -82,6 +82,25 @@
   font-size: 18px;
 }
 
+.modal-text3 {
+  display: flex;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.modal-text3 .link-box {
+  width: 150px;
+  color: #fff;
+  background-color: #293077;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.modal-text3 a {
+  color: #fff;
+}
+
 .modal-text2 {
   display: flex;
   font-size: 18px;
@@ -91,12 +110,14 @@
 }
 
 .modal-text h3,
-.modal-text2 h3 {
+.modal-text2 h3,
+.modal-text3 h3 {
   font-weight: bold;
 }
 
 .modal-text span,
-.modal-text2 span {
+.modal-text2 span,
+.modal-text3 h3 {
   margin-left: 5px;
 }
 
